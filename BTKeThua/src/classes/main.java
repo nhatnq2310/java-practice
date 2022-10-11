@@ -10,9 +10,30 @@ package classes;
  * @author Administrator
  */
 public class main {
+    public static void printOddToN(int n) {
+        for (int i = 0; i < n; i++) {
+            if (i % 2 != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    public static void printDividedBy3(int n){
+        for (int i = 0; i < n; i++) {
+            if (i % 3 == 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+    public static boolean checkEven(int n){
+        if (n % 2 ==0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     public static void main(String[] args){
-        boolean test = false || false;
-        System.out.println(!test);
+        
+        System.out.println(checkEven(100));
     }
 }
 
