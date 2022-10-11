@@ -81,9 +81,9 @@ public class FruitList extends ArrayList<Fruit> {
         } else {
             Collections.sort(this);
             System.out.printf("%15s|%15s|%15s\n", "ID", "NAME", "PRICE");
-            this.forEach((fruit) -> {
+                for (Fruit fruit : this) {
                 System.out.println(fruit);
-            });
+            }
             System.out.println();
         }
     }
