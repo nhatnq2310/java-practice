@@ -54,7 +54,7 @@ public class Fruit implements Comparable<Fruit> {
 
     @Override
     public int compareTo(Fruit o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.getID().compareTo(o.ID);
     }
     
 }

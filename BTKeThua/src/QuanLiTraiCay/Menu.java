@@ -30,7 +30,10 @@ public class Menu extends ArrayList <String> {
         return choice;
     }
 
-    void addItem(String add_new_Fruit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void addItem(String fruit) {
+        add(fruit);
     }
+
+    
+    
 }

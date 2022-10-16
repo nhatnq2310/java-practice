@@ -12,10 +12,10 @@ package QuanLiTraiCay;
 public class FruitListUse {
     public static void main(String[] args) {
         Menu menu = new Menu();
-        menu.add("Add new Fruit");
-        menu.add("Update Fruit based on ID");
-        menu.add("Show the list in ascending order of IDs");
-        menu.add("Others: Quit");
+        menu.addFruit("Add new Fruit");
+        menu.addFruit("Update Fruit based on ID");
+        menu.addFruit("Show the list in ascending order of IDs");
+        menu.addFruit("Others: Quit");
         int choice;
         FruitList list = new FruitList();
         
