@@ -36,18 +36,18 @@ public class FruitList extends ArrayList<Fruit> {
             if (find(ID) != -1) {
                 System.out.println("ID exist !");
             }
-        } while (!ID.matches("^T\\d{3}$") || find(ID) != -1);
+        } while (!ID.matches("^F\\d{3}$") || find(ID) != -1);
         String name;
         do {
             System.out.print("Enter Fruit's name: ");
             name = sc.nextLine();
-            if (!name.matches("\\w$")) {
+            if (!name.matches("\\w+$")) {
                 System.out.println("Invalid value!");
             }
-        } while (!name.matches("\\w$"));
+        } while (!name.matches("\\w+$"));
 
         System.out.print("Enter Fruit's price: ");
-        int price = Integer.parseInt(sc.nextLine());
+        double price = Double.parseDouble(sc.nextLine());
         add(new Fruit(ID, name, price));
     }
     public void update() {
@@ -64,12 +64,12 @@ public class FruitList extends ArrayList<Fruit> {
                 do {
                     System.out.print("Enter Fruit's name: ");
                     name = sc.nextLine();
-                    if (!name.matches("\\w$")) {
+                    if (!name.matches("\\w+$")) {
                         System.out.println("Invalid value!");
                     }
-                } while (!name.matches("\\w$"));
+                } while (!name.matches("\\w+$"));
                 System.out.print("Enter Fruit's price: ");
-                int price = Integer.parseInt(sc.nextLine());
+                double price = Double.parseDouble(sc.nextLine());
                 Fruit newFruit = new Fruit(ID, name, price);
                 set(pos, newFruit);
             }

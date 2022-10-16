@@ -49,7 +49,7 @@ public class Fruit implements Comparable<Fruit> {
 
     @Override
     public String toString() {
-        return "Fruit{" + "ID=" + ID + ", name=" + name + ", price=" + price + '}';
+        return String.format("%15s|%15s|%15lf", ID, name, price);
     }
 
     @Override
