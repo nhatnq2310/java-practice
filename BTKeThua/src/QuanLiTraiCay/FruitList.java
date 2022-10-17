@@ -14,6 +14,7 @@ import java.util.Scanner;
  * @author Administrator
  */
 public class FruitList extends ArrayList<Fruit> {
+
     Scanner sc = new Scanner(System.in);
 
     public int find(String ID) {
@@ -24,7 +25,7 @@ public class FruitList extends ArrayList<Fruit> {
         }
         return -1;
     }
-    
+
     public void add() {
         String ID;
         do {
@@ -50,6 +51,7 @@ public class FruitList extends ArrayList<Fruit> {
         double price = Double.parseDouble(sc.nextLine());
         add(new Fruit(ID, name, price));
     }
+
     public void update() {
         if (isEmpty()) {
             System.out.println("Empty list!");
@@ -75,14 +77,15 @@ public class FruitList extends ArrayList<Fruit> {
             }
         }
     }
+
     public void print() {
         if (isEmpty()) {
             System.out.println("Empty list !");
         } else {
             Collections.sort(this);
             System.out.printf("%15s|%15s|%15s\n", "ID", "NAME", "PRICE");
-                for (Fruit fruit : this) {
-                System.out.println(fruit);
+            for (Fruit fruit : this) {
+                System.out.println(fruit.toString());
             }
             System.out.println();
         }
