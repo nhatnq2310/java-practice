@@ -5,10 +5,29 @@
  */
 package PROThiThu;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 /**
  *
  * @author Administrator
  */
-public class SpecCala {
+public class SpecCala extends ArrayList<Cala>{
+    int color;
+
+    public SpecCala() {
+    }
+
+    public SpecCala(int color, String owner, int price) {
+        super();
+        this.color = color;
+    }
+
+    @Override
+    public String toString() {
+        return "SpecCala{" + "color=" + color + '}';
+    }
+
+    
     
 }

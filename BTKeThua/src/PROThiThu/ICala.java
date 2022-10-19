@@ -5,10 +5,16 @@
  */
 package PROThiThu;
 
+import java.util.List;
+
 /**
  *
  * @author Administrator
  */
 public interface ICala {
-    
+   public int f1(List<Cala>t);
+   
+   public void f2(List<Cala>t);
+   
+   public void f3(List<Cala>t);
 }

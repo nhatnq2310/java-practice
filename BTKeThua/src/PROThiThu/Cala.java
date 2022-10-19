@@ -10,5 +10,32 @@ package PROThiThu;
  * @author Administrator
  */
 public class Cala {
+    String owner;
+    int price;
+
+    public Cala() {
+    }
+
+    public Cala(String owner, int price) {
+        this.owner = owner;
+        this.price = price;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    
     
 }
