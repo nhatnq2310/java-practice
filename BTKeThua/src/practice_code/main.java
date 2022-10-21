@@ -18,15 +18,27 @@ public class main {
         }
     }
     
+    
     // Bt 1: viet ham nhan vao string, tra ve string ma Uppercase tat ca cac chu cai dau
     // Vd: Nhap vao: "be nhat luoi bieng" -> Tra ve: "Be Nhat Luoi Bieng"
-    
+    public static String toUpperCase(String sen){
+        String[] ars = sen.split(" ");
+        StringBuilder s = new StringBuilder();
+        for (int i = 0; i < ars.length; i++) {
+            String item = ars[i];
+            String ch = item.substring(0,1).toUpperCase();
+            item = ch + item.substring(1).toLowerCase();
+            s.append(item).append(" ");
+        }
+        
+       return s.toString().trim();
+    }
     
     public static void main(String[] args){
         System.out.println(checkEven(2));
         
-        String s = new String("be nhat luoi bieng");
+        String s = toUpperCase("be nhat luoi bieng");
         //Convert to UpperCase
-        System.out.println(s.toUpperCase());
+       System.out.println(s);
     }
 }
