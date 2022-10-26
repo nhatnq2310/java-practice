@@ -5,10 +5,30 @@
  */
 package LamQuenVoiDe;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author Administrator
  */
-public class Menu {
+public class Menu extends ArrayList <String> {
+     public Menu(){
+        super();
+    }
+
+    public void addFruit(String item) {
+        add(item);
+    }
+
+    public int getChoice() {
+        for (int i = 0; i < this.size(); i++)
+            System.out.println((i+1) + "- " + this.get(i));
+        System.out.print("Your choice? ");
+        Scanner sc = new Scanner(System.in);
+        int choice = Integer.parseInt(sc.nextLine());
+        return choice;
+    }
+
     
 }

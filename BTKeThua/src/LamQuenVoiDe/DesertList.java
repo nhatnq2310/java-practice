@@ -13,17 +13,31 @@ import java.util.Scanner;
 public class DesertList extends ArrayList<Desert> {
     Scanner sc = new Scanner(System.in);
     
-    Desert de = new Desert("Kem", 2);
+    Desert desert = new Desert("kem", 4);
  
     public void print() {
-        if (isEmpty()) {
-            System.out.println("Empty list !");
-        } else {
-            System.out.printf("%15s|%15s|%15s\n", "ID", "NAME", "Step");
+        
+            System.out.printf("%15s|%15s\n", "NAME", "Step");
             for (Desert desert : this) {
                 System.out.println(desert.toString());
             }
             System.out.println();
         }
+    
+    public void update() {
+                String name;
+                do {
+                    System.out.print("Enter Desertt's name: ");
+                    name = sc.nextLine();
+                    if (!name.matches("\\w+$")) {
+                        System.out.println("Invalid value!");
+                    }
+                } while (!name.matches("\\w+$"));
+                System.out.print("Enter Desert STep: ");
+                int Step = Integer.parseInt(sc.nextLine());
+                Desert newDesert = new Desert(name, Step);
+                
+            
+        
     }
 }
